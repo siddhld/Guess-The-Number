@@ -35,7 +35,7 @@ let random = Math.trunc(Math.random() * 15) + 1;
 let userScore = 15;
 let highScore = 0;
 
-document.querySelector('.quest').textContent = random;
+// document.querySelector('.quest').textContent = random;
 document.querySelector('.check').addEventListener('click', function () {
   let guess = Number(document.querySelector('.guess').value);
 

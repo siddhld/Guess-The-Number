@@ -243,15 +243,24 @@ input {
     height: 100%;
   }
 
+  .top {
+    margin: 1.5vh 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   .between {
     font-size: 1.6vh;
   }
   .again {
-    font-size: 2vh;
+    font-size: 1.8vh;
+    width: 16.5vh;
+    height: 6vh;
   }
 }
 
-@media (max-width: 250px) {
+/* @media (max-width: 250px) {
   .top {
     margin: 1vh 4px;
     display: flex;
@@ -268,4 +277,4 @@ input {
     height: 6vh;
     font-size: 1.7vh;
   }
-}
+} */

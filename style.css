@@ -19,24 +19,6 @@ body {
   justify-content: space-between;
 }
 
-.play {
-  width: 10vh;
-  height: 10vh;
-  position: absolute;
-  top: 19%;
-  left: 2%;
-  border: none;
-  font-size: 6vh;
-  transition: all 0.2s ease;
-  color: rgb(59, 59, 59);
-  background-color: transparent;
-}
-
-.play :hover {
-  cursor: pointer;
-  transform: scale(1.1);
-}
-
 .btn {
   font-family: 'Press Start 2P', cursive;
   width: 20vh;
@@ -95,7 +77,43 @@ h1 {
   position: relative;
   margin-top: 5vh;
   display: flex;
+  align-self: center;
   justify-content: center;
+  gap: 15%;
+}
+
+.quest {
+  position: relative;
+  text-align: center;
+  padding-left: 0.7vh;
+  padding-top: 4.8vh;
+  width: 15vh;
+  height: 15vh;
+  /* padding: 1.4% 3%; */
+  font-size: 5.5vh;
+  background-color: #0b7285;
+  border-radius: 50%;
+  display: inline-block;
+  animation: blink 0.9s infinite;
+}
+
+.play {
+  width: 15vh;
+  height: 15vh;
+  position: relative;
+  /* top: 19%;
+  left: 2%; */
+  border: none;
+  font-size: 6vh;
+  transition: all 0.2s ease;
+  color: rgb(59, 59, 59);
+  background-color: #0b7285;
+  border-radius: 50%;
+}
+
+.play :hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .line {
@@ -107,14 +125,6 @@ h1 {
   top: 40%;
   /* transform: translate(-50); */
   text-align: center;
-}
-.quest {
-  padding: 1.4% 3%;
-  font-size: 5.5vh;
-  background-color: #0b7285;
-  border-radius: 9px;
-  display: inline-block;
-  animation: blink 0.9s infinite;
 }
 
 @keyframes blink {
@@ -247,18 +257,34 @@ input {
   }
 
   .quest {
-    padding: 3.4% 5%;
+    width: 12vh;
+    height: 12vh;
+    position: relative;
+    text-align: center;
+    padding-left: 0.7vh;
+    padding-top: 4.8vh;
     font-size: 4.5vh;
     background-color: #0b7285;
-    border-radius: 9px;
     display: inline-block;
     animation: blink 0.9s infinite;
+  }
+
+  .play {
+    width: 12vh;
+    height: 12vh;
+    font-size: 6vh;
   }
 }
 
 @media (max-width: 750px) {
   body {
     height: 100%;
+  }
+
+  .quest {
+    padding-left: 0.7vh;
+    padding-top: 3.7vh;
+    font-size: 4.5vh;
   }
 
   .top {

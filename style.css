@@ -70,9 +70,9 @@ h1 {
     color: #ff5e00;
   }
 }
-audio {
+/* audio {
   display: none;
-}
+} */
 .que {
   position: relative;
   margin-top: 5vh;
@@ -173,7 +173,11 @@ input {
   margin-bottom: 8vh;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 650px) {
+  body {
+    height: 100%;
+  }
+
   .top {
     margin: 2vh;
     display: flex;
@@ -232,5 +236,18 @@ input {
     border-radius: 9px;
     display: inline-block;
     animation: blink 0.9s infinite;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    height: 100%;
+  }
+
+  .between {
+    font-size: 1.6vh;
+  }
+  .again {
+    font-size: 2vh;
   }
 }

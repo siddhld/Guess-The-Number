@@ -52,8 +52,7 @@ document.querySelector('.check').addEventListener('click', function () {
   } else if (guess !== random) {
     if (userScore < 2) {
       document.querySelector('.score').textContent = 0;
-      document.querySelector('.message').textContent =
-        'You Lose! Game Over 😵‍💫🤕';
+      document.querySelector('.message').textContent = 'You Lose! 😵‍💫🤕';
     } else {
       document.querySelector('.message').textContent =
         guess > random ? '🥲 Too High 📈' : '🥲 Too Low 📉';

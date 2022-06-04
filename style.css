@@ -250,3 +250,18 @@ input {
     font-size: 2vh;
   }
 }
+
+@media (max-width: 250px) {
+  .top {
+    margin: 1vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .again {
+    width: 16vh;
+    height: 6vh;
+    font-size: 1.7vh;
+  }
+}

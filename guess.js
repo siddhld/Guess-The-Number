@@ -21,10 +21,6 @@
 
 //   console.log(guess, typeof guess);
 
-//   if (!guess) {
-//     document.querySelector('.message').textContent = 'Enter Number First';
-//   }
-
 //   if (guess === 12) {
 //     document.querySelector('.message').textContent = '😊Correct Number🎉';
 //     document.querySelector('.quest').textContent = guess;

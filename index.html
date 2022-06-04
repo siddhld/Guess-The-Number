@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Guess The Number</title>
+  </head>
+  <body>
+    <header>
+      <audio controls loop autoplay>
+        <source src="music/background music.mp3" type="audio/mpeg" />
+      </audio>
+      <div class="top">
+        <button class="btn again">Again😁</button>
+        <p class="between">{Between 1 to 15}</p>
+      </div>
+      <h1 class="blinking">Guess The Number!</h1>
+      <div class="que">
+        <div class="line"></div>
+        <div class="quest">?</div>
+      </div>
+    </header>
+    <main class="content">
+      <section class="left">
+        <input type="number" class="guess" min="1" max="2" />
+        <button class="btn check">Check!</button>
+      </section>
+      <section class="right">
+        <p class="pp message">🤔 Start guessing...</p>
+        <p class="pp label-score">💯 Keys: <span class="score">15</span></p>
+        <p class="pp label-highscore">
+          🥇 Highscore: <span class="highscore">0</span>
+        </p>
+      </section>
+    </main>
+    <script type="text/javascript" src="guess.js"></script>
+  </body>
+</html>

@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Press Start 2P', cursive;
+  background-color: #7fffd48a;
+}
+
+/* Header  */
+.top {
+  margin: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn {
+  font-family: 'Press Start 2P', cursive;
+  width: 20vh;
+  height: 7vh;
+  font-size: 2.5vh;
+  border: none;
+  border-radius: 9px;
+  background-color: #0b7285;
+  color: #fff;
+  transition: all 0.6s ease;
+}
+
+.btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.between {
+  font-size: 2.5vh;
+}
+
+h1 {
+  margin: 10vh 8vh;
+  margin-top: 3vh;
+  text-align: center;
+  font-size: 6vh;
+}
+
+.blinking {
+  animation: blinkingText 0.8s infinite;
+}
+@keyframes blinkingText {
+  20% {
+    color: #0192ff;
+  }
+  35% {
+    color: #ff3c00;
+  }
+  45% {
+    color: #1bb300;
+  }
+  65% {
+    color: #927d08;
+  }
+  75% {
+    color: #ff9500;
+  }
+  85% {
+    color: #ff5e00;
+  }
+}
+audio {
+  display: none;
+}
+.que {
+  position: relative;
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+}
+
+.line {
+  position: absolute;
+  width: 100%;
+  height: 1.5vh;
+  background-color: #0b7285;
+  z-index: -1;
+  top: 40%;
+  /* transform: translate(-50); */
+  text-align: center;
+}
+.quest {
+  padding: 1.4% 3%;
+  font-size: 5.5vh;
+  background-color: #0b7285;
+  border-radius: 9px;
+  display: inline-block;
+  animation: blink 0.9s infinite;
+}
+
+@keyframes blink {
+  50% {
+    color: #ff3c00;
+  }
+  100% {
+    color: #ffb005;
+  }
+}
+/* Main  */
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  margin-top: 12vh;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+
+  align-items: center;
+  justify-content: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input {
+  text-align: center;
+}
+
+.check {
+  font-size: 4.5vh;
+  width: 50vh;
+  height: 10vh;
+}
+
+.guess {
+  width: 25vh;
+  height: 10vh;
+  border: none;
+  border-radius: 9px;
+  transition: all 300ms ease;
+  outline: none;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 5vh;
+  box-shadow: inset -5px -5px 12px #d4fff1, 5px 5px 12px rgba(0, 0, 0, 0.16);
+}
+
+.guess:hover {
+  border: 7px solid rgba(127, 255, 212, 0.773);
+}
+
+.right {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  gap: 1.5vh;
+}
+
+.pp {
+  font-size: 4vh;
+  margin-bottom: 5vh;
+}
+.message {
+  font-size: 3vh;
+  margin-bottom: 8vh;
+}
+
+@media (max-width: 750px) {
+  .top {
+    margin: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .between {
+    font-size: 2.1vh;
+  }
+
+  h1 {
+    margin: 7vh 8vh;
+    text-align: center;
+    font-size: 4vh;
+  }
+
+  .left {
+    order: 2;
+  }
+
+  .right {
+    justify-items: center;
+    gap: 1px;
+  }
+  .check {
+    margin-bottom: 5vh;
+    font-size: 3.5vh;
+    width: 35vh;
+    height: 9vh;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    gap: 1vh;
+    margin-top: 8vh;
+  }
+
+  .pp {
+    font-size: 3vh;
+    margin-bottom: 3.5vh;
+  }
+  .message {
+    font-size: 2.5vh;
+    margin-bottom: 6.5vh;
+  }
+
+  .guess {
+    box-shadow: inset -2px -2px 12px #d4fff1, 2px 2px 12px rgba(0, 0, 0, 0.16);
+  }
+
+  .quest {
+    padding: 3.4% 5%;
+    font-size: 4.5vh;
+    background-color: #0b7285;
+    border-radius: 9px;
+    display: inline-block;
+    animation: blink 0.9s infinite;
+  }
+}

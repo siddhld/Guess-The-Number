@@ -31,6 +31,25 @@ let random = Math.trunc(Math.random() * 15) + 1;
 let userScore = 15;
 let highScore = 0;
 
+// Audio Section
+let icon = document.querySelector('#icon');
+let audio = new Audio();
+audio.src = 'music/background music.mp3';
+audio.loop = true;
+audio.load();
+let playing = false;
+function music() {
+  if (playing == false) {
+    audio.play();
+    playing = true;
+    icon.innerHTML = '<i class="fa fa-volume-up" aria-hidden="true"></i>';
+  } else {
+    audio.pause();
+    playing = false;
+    icon.innerHTML = '<i class="fa fa-volume-off" aria-hidden="true"></i>';
+  }
+}
+
 // document.querySelector('.quest').textContent = random;
 document.querySelector('.check').addEventListener('click', function () {
   let guess = Number(document.querySelector('.guess').value);

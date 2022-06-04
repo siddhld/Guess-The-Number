@@ -5,17 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
     <title>Guess The Number</title>
   </head>
   <body>
     <header>
-      <audio loop autoplay>
+      <!-- <audio loop>
         <source src="music/background music.mp3" type="audio/mpeg" />
-      </audio>
+      </audio> -->
       <div class="top">
         <button class="btn again">Again😁</button>
         <p class="between">{Between 1 to 15}</p>
       </div>
+      <button onclick="music()" class="play" id="icon">
+        <i
+          class="fa fa-volume-off"
+          title="icon"
+          id="icon"
+          aria-hidden="true"
+        ></i>
+      </button>
       <h1 class="blinking">Guess The Number!</h1>
       <div class="que">
         <div class="line"></div>

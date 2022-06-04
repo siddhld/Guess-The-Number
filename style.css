@@ -253,10 +253,14 @@ input {
 
 @media (max-width: 250px) {
   .top {
-    margin: 1vh;
+    margin: 1vh 4px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  .between {
+    font-size: 1.3vh;
   }
 
   .again {

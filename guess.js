@@ -132,4 +132,18 @@ document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape') {
     againFunc();
   }
+  if (e.key === 'm' || e.key === 'M') {
+    if ((playing = true)) {
+      audio.pause();
+      playing = false;
+      icon.innerHTML = '<i class="fa fa-volume-off" aria-hidden="true"></i>';
+    }
+  }
+  if (e.key === 'p' || e.key === 'P') {
+    if (playing == false) {
+      audio.play();
+      playing = true;
+      icon.innerHTML = '<i class="fa fa-volume-up" aria-hidden="true"></i>';
+    }
+  }
 });

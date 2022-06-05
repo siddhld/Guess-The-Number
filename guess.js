@@ -112,6 +112,8 @@ let againFunc = function () {
   document.querySelector('.score').textContent = userScore;
   document.querySelector('body').style.backgroundColor = '#7fffd48a';
   document.querySelector('.guess').value = '';
+  win.pause();
+  gameover.pause();
 };
 
 // Calling Function

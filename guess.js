@@ -129,7 +129,7 @@ document.addEventListener('keydown', function (e) {
   if (e.key === 'Enter') {
     checkFunc();
   }
-  if (e.key === 'Escape') {
+  if (e.key === 'Escape' || e.key === '!') {
     againFunc();
   }
   if (e.key === 'm' || e.key === 'M') {

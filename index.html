@@ -10,11 +10,8 @@
   </head>
   <body>
     <header>
-      <!-- <audio loop>
-        <source src="music/background music.mp3" type="audio/mpeg" />
-      </audio> -->
       <div class="top">
-        <button class="btn again">Again😁</button>
+        <button onclick="sound()" class="btn again">Again😁</button>
         <p class="between">{Between 1 to 15}</p>
       </div>
 
@@ -35,7 +32,7 @@
     <main class="content">
       <section class="left">
         <input type="number" class="guess" min="1" max="2" />
-        <button class="btn check">Check!</button>
+        <button onclick="sound()" class="btn check">Check!</button>
       </section>
       <section class="right">
         <p class="pp message">🤔 Start guessing...</p>

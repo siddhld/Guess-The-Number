@@ -50,8 +50,23 @@ function music() {
   }
 }
 
-// document.querySelector('.quest').textContent = random;
-document.querySelector('.check').addEventListener('click', function () {
+// Click Sound
+let clickSound = new Audio();
+clickSound.src = 'music/clickSound.mpeg';
+function sound() {
+  clickSound.play();
+}
+
+// win Sound
+let win = new Audio();
+win.src = 'music/win.mpeg';
+
+// lose Sound
+let gameover = new Audio();
+gameover.src = 'music/lose.mp3';
+
+// function Implementation
+let checkFunc = function () {
   let guess = Number(document.querySelector('.guess').value);
 
   if (!guess) {
@@ -60,23 +75,36 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('.quest').textContent = guess;
     document.querySelector('.message').textContent = '😊 Correct Number🎉';
     document.querySelector('body').style.backgroundColor = '#60b647';
+    if ((playing = true)) {
+      audio.pause();
+      playing = false;
+      icon.innerHTML = '<i class="fa fa-volume-off" aria-hidden="true"></i>';
+    }
+    win.play();
     if (userScore > highScore) {
       highScore = userScore;
       document.querySelector('.highscore').textContent = userScore;
     }
   } else if (guess !== random) {
     if (userScore < 2) {
+      document.querySelector('body').style.backgroundColor = '#fa5252';
       document.querySelector('.score').textContent = 0;
       document.querySelector('.message').textContent = 'You Lose! 😵‍💫🤕';
+      if ((playing = true)) {
+        audio.pause();
+        playing = false;
+        icon.innerHTML = '<i class="fa fa-volume-off" aria-hidden="true"></i>';
+      }
+      gameover.play();
     } else {
       document.querySelector('.message').textContent =
         guess > random ? '🥲 Too High 📈' : '🥲 Too Low 📉';
       document.querySelector('.score').textContent = --userScore;
     }
   }
-});
+};
 
-document.querySelector('.again').addEventListener('click', function () {
+let againFunc = function () {
   random = Math.trunc(Math.random() * 15) + 1;
   userScore = 15;
   document.querySelector('.quest').textContent = '?';
@@ -84,4 +112,22 @@ document.querySelector('.again').addEventListener('click', function () {
   document.querySelector('.score').textContent = userScore;
   document.querySelector('body').style.backgroundColor = '#7fffd48a';
   document.querySelector('.guess').value = '';
+};
+
+// Calling Function
+document.querySelector('.check').addEventListener('click', function () {
+  checkFunc();
+});
+
+document.querySelector('.again').addEventListener('click', function () {
+  againFunc();
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Enter') {
+    checkFunc();
+  }
+  if (e.key === 'Escape') {
+    againFunc();
+  }
 });
